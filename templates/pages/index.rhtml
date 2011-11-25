@@ -1,23 +1,12 @@
-<div class="site">
-	<div class="title">
-		<a href="/"><h2>Lijin's</h2></a>
-		<a class="extra" href="/">Home</a>
-		<a class="extra" href="/">About</a>
-	</div>
-</div>
-
 <%#<h3>Blog Posts</h3>%>
 <section id="articles">
 <ul class="posts">
-	<% for article in articles[0...10] %>
+	<% for article in articles[0...20] %>
 		<li>
 		<span><%= article.date %></span> » 
 		<a href="<%= article.path %>"><%= article.title %></a>
 		</li>
 	<% end %>
 </ul>
-</section>
-<section id="archives">
-<%= archives[3..-1] %>
 </section>
 

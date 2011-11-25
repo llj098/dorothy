@@ -7,12 +7,21 @@
     <title><%= title %></title>
   </head>
   <body>
-    <section>
-      <%= yield %> 
-    </section>
-    <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
-    </footer>
+	  <div class="site">
+		  <div class="title">
+			  <a href="/"><h2>Lijin's</h2></a>
+			  <a class="extra" href="/">Home</a>
+			  <a class="extra" href="/archives">Archives</a>
+			  <a class="extra" href="/about">About</a>
+		  </div>
+	  </div>
+
+	  <section>
+	  <%= yield %> 
+	  </section>
+	  <footer>
+	  powered by <a href="http://cloudhead.io/toto">toto</a>
+	  </footer>
   </body>
 </html>
 
