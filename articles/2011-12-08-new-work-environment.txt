@@ -1,0 +1,19 @@
+title: Blog on
+author: Lijin Liu
+date: 2011/10/09
+
+Finally, I get a blog engine which is I was always looking for - toto.  
+
+Toto is a 300 lines code blog engine written in ruby.  
+
+What the features I want and toto support are :
+
+ - text based, support mark down format support.  
+ - git version control.  
+ - it could be able to run without a database such as MySql.  
+ - support rss/atom  
+
+
+Thank you github.com, I finally get the blog engine I expected such a long time.  
+
+There is no excuse now, Blog On.

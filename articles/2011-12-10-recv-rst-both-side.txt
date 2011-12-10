@@ -1,0 +1,23 @@
+title: recv tcp rst both side 
+author: Lijin Liu
+date: 2011/12/10
+
+This week a workmate ask me a strange question.
+
+It seems that both client and server side receive the RST packet in one tcp stream.  
+
+Our client is a mobile client runs on Symbian OS which access internet by cmwap/cmnet.  
+
+The client often read socket returns -36. It means that the tcp connection reset by remote peer.  
+
+Then we check our server log, the log shows that the server side also receive a RST packet.  
+
+It seems that no reason. After a few dig, we found the problem: TCP KEEP-ALIVE.  
+
+On the server side, we enabled the tcp keep-alive. In our pcap file, we can find that the client did not answer the keep-alive. So the TCP stack send a rst packet to the client, but for the server-side application, the application would also receive -1 when read the socket.  
+
+And then we disabled the tcp keep-alive, fixed.  
+
+It is not a good idea that enable the tcp keep-alive for the mobile-client due to the weak network.
+
+ 
